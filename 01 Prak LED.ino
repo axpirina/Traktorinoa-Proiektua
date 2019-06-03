@@ -3,7 +3,7 @@
   by Axpi
   This example code is in the public domain.
 */
-int led=10;  //Aldagaien deklarazioa
+int led = 10;  //Aldagaien deklarazioa
 
 void setup() {
   pinMode(led, OUTPUT);
