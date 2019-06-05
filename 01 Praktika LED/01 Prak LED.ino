@@ -1,9 +1,9 @@
 /* LED
-  Arduino UNOaren 10. pinean dagoen LED-a dir dir jartzen duen programa 
+  Arduino UNOaren 8. pinean dagoen LED-a dir dir jartzen duen programa 
   by Axpi
   This example code is in the public domain.
 */
-int led = 10;  //Aldagaien deklarazioa
+int led = 8;  //Aldagaien deklarazioa
 
 void setup() {
   pinMode(led, OUTPUT);
