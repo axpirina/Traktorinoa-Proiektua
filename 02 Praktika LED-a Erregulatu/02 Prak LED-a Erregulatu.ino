@@ -14,7 +14,7 @@ void setup() {
 
 void loop() {
 
-  for (int i = 0; i >= 1023; i = i + 1) { // FADE eran LED-a piztu
+  for (int i = 0; i <= 1023; i = i + 1) { // FADE eran LED-a piztu
     analogWrite(led, i);
     Serial.print("LED-aren balioa: ");
     Serial.println(i);
