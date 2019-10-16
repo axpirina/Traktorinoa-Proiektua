@@ -1,36 +1,32 @@
-/* Sweep
-by BARRAGAN <http://barraganstudio.com>
-This example code is in the public domain.
- 
-translated 8 Nov 2017
-by Aitor Azpiroz
-http://www.arduino.cc/en/Tutorial/Sweep
+/* Serbomotor bat potentziometro bitartez kontrolatzeko programa.
+  by Axpi
+  This example code is in the public domain.
 */
- 
-#include <Servo.h> //Serbomotorra kontrolatzen duen liburutegia                
-Servo myservo; // Serbomotor objetu bat sortu
-// 12 Serbomotor sortu daitezke programa berdinean
- 
-int pos = 0; // Serboaren posizioa gordeko duen aldagaia
- 
+#include <Servo.h>
+
+int x = 0;
+int angelua = 0;
+
+Servo Horizontala; // Horizontala Serbo objetua sortzen du
+
+int angeluaSerbo = 90;
+
 void setup() {
   Serial.begin(9600);
-  myservo.attach(6); // Serboa D6 pinean konektatua. D6 pinean
+  Horizontala.attach(6); // Serbo horizontala konektatutzen du Arduinoko 6. Pin-era
 }
- 
+
 void loop() {
-   for (pos = 0; pos <= 180; pos += 1) { // 0 gradutatik 180ra 
-      // gradu bateko saltoarekin
-      myservo.write(pos); // esan serboari ‘pos’ egoerara 
-      Serial.print("Serboaren posizioa = "); 
-      Serial.println(pos);
-      delay(15); //15ms itxaron
-   }
- 
-   for (pos = 180; pos >= 0; pos -= 1) { // 180 gradutatik 0 ra
-      myservo.write(pos); // esan serboari ‘pos’ egoerara 
-      Serial.print("Serboaren posizioa = "); 
-      Serial.println(pos);
-      delay(15); // 15ms itxaron
-   }
+  
+  x = analogRead(0);           // Irakurketa 10 bit-etan (0-1023) balio artean
+  x = map(x, 0, 1023, 0, 255); // Irteerarako mappeatu 8 bit-etara (0-255) balio artean
+  angelua = map(x, 0, 255, 0, 180); // angelua kalkulatu (0-180) balio artean
+  
+  Serial.print("Serbo angelua:   ");
+  Serial.println(angelua);
+  Serial.println(" ");
+  
+  Horizontala.write(angelua);
+  
+  delay(0);
 }
