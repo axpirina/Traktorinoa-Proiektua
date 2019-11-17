@@ -2,36 +2,32 @@
 
 GitHub repositorian aurkituko duzu informazio xehetuagoa (https://github.com/axpirina/Traktorinoa) ..
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# IoM 2040 Shutdown Controller
 
-### Kodea
+This service shuts down the IoM 2040 device when a push button (GND) connected to GPIO 3 is pressed.
 
-Jarraian Traktorino 1.0 bertsioaren kodea luzatzen dizuet.
+## Installation
 
-```markdown
-Syntax highlighted code block
+Enter the following command in the terminal and the service will be automatically installed: 
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+wget https://raw.githubusercontent.com/Tknika/iom2040-shutdown-controller/master/install.sh -O - | sudo sh
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Configuration
 
-### Simulazioak
+Remember to configure ***/boot/config.txt*** file in your SD and ADD this line right after flashing the last Rasbian in your SD. 
+ 
+1. Open your ***/boot/config.txt*** file while reading the SD in any operation system.  :computer: 
+2. ADD the following line and SAVE.  :page_facing_up:
 
-Proiektuaren simulazioak hemen aurkituko dituzue [simulazioak](https://www.tinkercad.com/#/dashboard?type=all&collection=projects&id=hl08GTzHE5j) 
+     ```enable_uart=1 ```
+    
+3. This will enable GPIO serial port which is disabled in newer versions of Raspbian Jessie (May 2016 and later).
 
-### Kontaktua
+## Electronics
 
-Egielaren kontaktua (axpirina@oteitzalp.com) edo GitHub kontaktua [contact support](https://github.com/contact).
+Place and connect the following circuit on raspberry GPIOs.
+
+![What is this](RaspiProtoboard.png)
+![What is this](RaspiScheme.png)
