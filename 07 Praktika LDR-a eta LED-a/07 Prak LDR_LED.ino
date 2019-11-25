@@ -12,6 +12,7 @@ void setup() {
  
 // Serie komunikazioa martxan jarri
 Serial.begin(9600);
+pinMode(led,OUTPUT);
 }
  
 void loop() {
@@ -22,7 +23,8 @@ argiValue = analogRead(A0);           // 0 pin analogikoa irakurri eta aldagaiea
 Serial.print("Gelako argiaren balioa 1-255 artean: ");    // Irakurririko balioa inprimatu
 Serial.println(argiValue); 
 
-int ledValue = map (argiValue, 0,255,255,0); 
+int ledValue = argiValue;
+argiValue = map (argiValue, 0,255,255,0); 
 analogWrite(led,ledValue);
 
 delay(150);
