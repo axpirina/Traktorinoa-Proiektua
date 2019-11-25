@@ -24,7 +24,7 @@ Serial.print("Gelako argiaren balioa 1-255 artean: ");    // Irakurririko balioa
 Serial.println(argiValue); 
 
 int ledValue = argiValue;
-argiValue = map (argiValue, 0,255,255,0); 
+ledValue = map (ledValue, 0,255,255,0); 
 analogWrite(led,ledValue);
 
 delay(150);
