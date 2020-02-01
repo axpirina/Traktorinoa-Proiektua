@@ -22,7 +22,7 @@ int led = 13;
 
 void setup()
 {
-  pinMode(M1, OUTPUT);
+  //pinMode(M1, OUTPUT);
   pinMode(led, OUTPUT);
   Serial.begin(9600);
 }
