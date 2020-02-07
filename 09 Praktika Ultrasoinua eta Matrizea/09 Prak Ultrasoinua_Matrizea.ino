@@ -80,7 +80,7 @@ void loop() {
   reading = mysensor.distanceInCm();
   Serial.print("Sensor Reading :"); Serial.print(reading); Serial.println(" ZM");
 
-  if (reading < 6) {
+  if (reading >1 && reading < 6) {
     lc.clearDisplay(0);
     obstacle();
   }
