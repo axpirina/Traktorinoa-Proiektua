@@ -12,11 +12,9 @@ void setup() {
 
 void loop() {
   digitalWrite(led, HIGH);   
-  Serial.print("LED-a  ");          
-  Serial.println("ON");
+  Serial.print("LED-a ON");          
   delay(1000);                       
   digitalWrite(led, LOW);    
-  Serial.print("LED-a  ");           
-  Serial.println("OFF");
+  Serial.print("LED-a OFF ");           
   delay(1000);                       
 }
