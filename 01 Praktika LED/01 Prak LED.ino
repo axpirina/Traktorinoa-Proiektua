@@ -3,7 +3,7 @@
   by Axpi
   This example code is in the public domain.
 */
-int led = 5;  //Aldagaien deklarazioa
+int led = 8;  //Aldagaien deklarazioa
 
 void setup() {
   pinMode(led, OUTPUT);
@@ -12,9 +12,9 @@ void setup() {
 
 void loop() {
   digitalWrite(led, HIGH);   
-  Serial.print("LED-a ON");          
+  Serial.println("LED-a ON");          
   delay(1000);                       
   digitalWrite(led, LOW);    
-  Serial.print("LED-a OFF ");           
+  Serial.println("LED-a OFF ");           
   delay(1000);                       
 }
