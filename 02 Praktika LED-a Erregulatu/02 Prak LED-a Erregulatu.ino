@@ -4,7 +4,7 @@
   This example code is in the public domain.
 */
 
-int led = 8;  //Aldagaien deklarazioa
+int led = 9;  //Aldagaien deklarazioa
 
 void setup() {
   // Hasieran eta behin bakarrik exekutatzen den kodea
@@ -14,7 +14,7 @@ void setup() {
 
 void loop() {
 
-  for (int i = 0; i <= 1023; i = i + 1) { // FADE eran LED-a piztu
+  for (int i = 0; i <= 255; i = i + 1) { // FADE eran LED-a piztu
     analogWrite(led, i);
     Serial.print("LED-aren balioa: ");
     Serial.println(i);
@@ -22,7 +22,7 @@ void loop() {
 
   delay(0);
 
-  for (int i = 1023; i >= 0; i = i - 1) { // FADE eran LED-a itzali
+  for (int i = 255; i >= 0; i = i - 1) { // FADE eran LED-a itzali
     analogWrite(led, i);
     Serial.print("LED-aren balioa: ");
     Serial.println(i);
