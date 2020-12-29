@@ -7,11 +7,11 @@
 int x = 0;
 int angelua = 0;
 
-Servo nireSerboa; // Horizontala Serbo objetua sortzen du
+Servo nireSerboa; // Serbo objetua sortzen du
 
 void setup() {
   Serial.begin(9600);
-  nireSerboa.attach(6); // Serbo horizontala konektatutzen du Arduinoko 6. Pin-era
+  nireSerboa.attach(6); // Serboa  Arduinoko 6. Pin-era
 }
 
 void loop() {
