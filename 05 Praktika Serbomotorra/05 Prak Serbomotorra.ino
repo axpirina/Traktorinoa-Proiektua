@@ -7,26 +7,23 @@
 int x = 0;
 int angelua = 0;
 
-Servo Horizontala; // Horizontala Serbo objetua sortzen du
-
-int angeluaSerbo = 90;
+Servo nireSerboa; // Horizontala Serbo objetua sortzen du
 
 void setup() {
   Serial.begin(9600);
-  Horizontala.attach(6); // Serbo horizontala konektatutzen du Arduinoko 6. Pin-era
+  nireSerboa.attach(6); // Serbo horizontala konektatutzen du Arduinoko 6. Pin-era
 }
 
 void loop() {
   
   x = analogRead(0);           // Irakurketa 10 bit-etan (0-1023) balio artean
-  x = map(x, 0, 1023, 0, 255); // Irteerarako mappeatu 8 bit-etara (0-255) balio artean
-  angelua = map(x, 0, 255, 0, 180); // angelua kalkulatu (0-180) balio artean
+  angelua = map(x, 0, 1023, 0, 180); // Irteerara mappeatu 0-180 artean
   
-  Serial.print("Serbo angelua:   ");
+  Serial.print("Serboaren angelua:   ");
   Serial.println(angelua);
   Serial.println(" ");
   
-  Horizontala.write(angelua);
+  nireSerboa.write(angelua);
   
-  delay(0);
+  delay(20);
 }
