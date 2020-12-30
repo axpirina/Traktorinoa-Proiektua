@@ -20,7 +20,7 @@ void loop() {
   Serial.print("Sakatzailea: ");
   Serial.println(balioa);
   
-  if ( balioa==1 ){
+  if ( balioa == 1 ){
     niretraktorinoa.aurrera();
   }
   else{
