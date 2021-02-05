@@ -14,7 +14,7 @@ void setup() {
 void loop() {
   reading = mysensor.distanceInCm();
   Serial.print("Sensor Reading :"); Serial.print(reading); Serial.println(" ZM");
-  if (reading<20){
+  if (reading >1 && reading<20){
      niretraktorinoa.atzera();
     }
   else{
