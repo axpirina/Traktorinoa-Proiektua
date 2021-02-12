@@ -1,13 +1,13 @@
 
 /* POTENTZIOMETROA
   Arduino UNOaren 0 pin analogikoan potentziometroaren irakurketa egin da.
-  13. Pinean dagoen LEDa erregulatu da proportzioan.
+  5. Pinean dagoen LEDa erregulatu da proportzioan.
   by Axpi
   This example code is in the public domain.
 */
 int sensorPin = 0;
 int balioa = 0;
-int LED_orlegia=11;
+int LED_orlegia=5;
 
 void setup() {
   Serial.begin(9600);
