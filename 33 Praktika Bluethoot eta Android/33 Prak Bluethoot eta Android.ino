@@ -39,9 +39,11 @@ void loop() {
     }
   }
   delay(50);
+ /* 
   reading = mysensor.distanceInCm();
   while (reading >1 && reading <25){
     niretraktorinoa.atzera();
     reading = mysensor.distanceInCm();
-    }
+    } 
+  */
 }
