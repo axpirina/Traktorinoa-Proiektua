@@ -24,6 +24,6 @@ void loop() {
     niretraktorinoa.aurrera();
   }
   else{
-    niretraktorinoa.stop();
+    niretraktorinoa.geratu();
   }
 }
