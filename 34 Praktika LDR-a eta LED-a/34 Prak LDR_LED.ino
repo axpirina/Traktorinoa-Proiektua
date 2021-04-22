@@ -6,7 +6,7 @@ Arduino batekin ingurunean dugun argi kantitatea neurtu eta LED bat proportzioan
 */
  
 int argiValue = 0; // Aldagaien deklarazioa
-int led = 11; 
+int led = 6; 
   
 void setup() {
  
