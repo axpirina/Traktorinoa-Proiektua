@@ -4,7 +4,7 @@
   This example code is in the public domain.
 */
 
-int led = 9;  //Aldagaien deklarazioa
+int led = 10;  //Aldagaien deklarazioa
 
 void setup() {
   // Hasieran eta behin bakarrik exekutatzen den kodea
