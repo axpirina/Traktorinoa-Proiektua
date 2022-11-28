@@ -13,15 +13,15 @@
  */
 
 #include <Traktorinoa.h>
-#include<UltraDistSensor.h>
+//#include<UltraDistSensor.h>
 Traktorinoa niretraktorinoa;
-UltraDistSensor mysensor;
-float reading;
+//UltraDistSensor mysensor;
+//float reading;
 
 void setup()
 {
   Serial.begin(9600);
-  mysensor.attach(7, 8); //Trigger pin , Echo pin
+  //mysensor.attach(7, 8); //Trigger pin , Echo pin
 }
 
 void loop() {
