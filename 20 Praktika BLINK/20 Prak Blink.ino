@@ -13,15 +13,12 @@
 void setup() {
   // Inizializazio baldintzak jartzen dira bertan
   pinMode(13, OUTPUT);
-  Serial.begin(9600);
 }
 
 // Loop funtzioak behin eta berriz exekutatzen ditu bertako aginduak
 void loop() {
   digitalWrite(13, HIGH);   // LED-a piztu
-  Serial.println("LED-a ON ");           // Serial monitorean LEDaren egoera idatzi
   delay(1000);                       // Segundu bat itxaron
   digitalWrite(13, LOW);    // LED-a itzaldu
-  Serial.println("LED-a  OFF");           // Serial monitorean LEDaren egoera idatzi
   delay(1000);                       // Segundu bat itxaron
 }
